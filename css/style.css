@@ -1,37 +1,48 @@
-body{
+body {
 
-    background-color:#072d21;
-    color:white;
+    background-color: #072d21;
+    color: white;
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
     margin: 10px
-    
 }
-h1{
+
+h1 {
     font-size: 80px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
 }
-h2,h3{
+
+h2,
+h3 {
     font-size: 50px;
     font-family: 'Times New Roman', Times, serif;
     color: hsl(199, 75%, 79%);
 }
-p{
+
+p {
     line-height: 2em;
 }
-img{
-    border:5px;
+
+img {
     padding: 10px;
     margin: 20px;
-    border-radius: 25px;
-    width: 400px;
+    width: 200px;
     height: auto;
 }
-nav{
+
+video {
+    padding: 10px;
+    margin: 20px;
+    width: 100px;
+    height: auto;
+}
+
+nav {
     margin-top: 40px;
 }
-nav ul{
+
+nav ul {
     font-size: 30px;
     display: grid;
     gap: 1px;
@@ -39,56 +50,301 @@ nav ul{
     margin: 5px;
 
 }
-nav ul li{
-	background-color: #232e27;
-    color:rgb(165, 168, 166);
-	padding:10px;
-	border:1px solid rgb(255, 255, 255);
-	border-radius: 10px 10px 0 0;
+
+nav ul li {
+    background-color: #232e27;
+    color: rgb(165, 168, 166);
+    padding: 10px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 10px 10px 0 0;
     text-align: center;
     cursor: pointer;
 }
-nav ul li:hover{
-	/* background-color: #45935c; */
+
+nav ul li:hover {
+    /* background-color: #45935c; */
     background-color: black;
     color: white;
-    
+    text-decoration: underline;
 }
 
 nav ul li a {
     display: block;
     text-decoration: none;
-    color: inherit; /* Inherit text color from parent */
+    color: inherit;
+    /* Inherit text color from parent */
 }
 
+p {
+    font-size: 20px;
+}
 
-.active{
+.active {
     color: hsl(0, 0%, 100%);
     text-transform: uppercase;
     background-color: #22614b;
+    text-decoration: underline;
 }
 
-.active:hover{
+.active:hover {
     color: hsl(0, 0%, 100%);
     text-transform: uppercase;
     background-color: #22614b;
+    text-decoration: underline;
 }
 
-.skip-to-main{
+.skip-to-main {
     position: absolute;
-    left: -1000px; 
+    left: -1000px;
 }
-.skip-to-main:focus{
+
+.skip-to-main:focus {
     left: 20px;
-    top:10px;
+    top: 10px;
+}
+
+.pet-grid-container {
+    display: grid;
+    margin: 5px 0;
+    grid-template-areas:
+        "pet-title pet-title pet-intro pet-intro"
+        "pet-main-img pet-main-img pet-intro pet-intro"
+        "pet-main-img pet-main-img pet-likes pet-likes"
+        "pet-img-title pet-img-title pet-img-title pet-img-title"
+        "pet-img-1 pet-img-2  pet-img-3   pet-img-4 ";
+    padding: 2%;
+    border-radius: 10px;
+    justify-items: center;
+    align-items: center;
+    border: 7px solid rgb(181, 205, 176);
+    border-radius: 25px;
+}
+
+
+.pet-title {
+    grid-area: pet-title;
+}
+
+.pet-main-img {
+    grid-area: pet-main-img;
+    width: 90%;
+
+}
+
+.pet-intro {
+    grid-area: pet-intro;
+}
+
+.pet-img-title {
+    grid-area: pet-img-title;
+}
+
+.pet-img-1 {
+    grid-area: pet-img-1;
+    width: 90%;
+}
+
+.pet-img-2 {
+    grid-area: pet-img-2;
+    width: 90%;
+}
+
+.pet-img-3 {
+    grid-area: pet-img-3;
+    width: 90%;
+}
+
+.pet-img-4 {
+    grid-area: pet-img-4;
+    width: 90%;
+}
+
+.pet-likes {
+    grid-area: pet-likes;
+    padding: 5%;
+    margin: 5%;
+    border: 5px dotted beige;
+    border-radius: 10px;
+
+}
+
+.pet-likes-list {
+    grid-area: pet-likes-list;
+
+}
+
+#video {
+    width: 69%;
+
+}
+
+.rec-grid-container {
+    display: grid;
+    margin: 5px 0;
+    grid-template-areas:
+        "rec-title rec-title rec-title"
+        "rec-main-img rec-main-img rec-info"
+        "rec-main-img rec-main-img rec-intro"
+        "rec-ingredient . rec-steps"
+        "rec-img-title rec-img-title rec-img-title"
+        "rec-img-1 rec-img-2  rec-img-3";
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2%;
+    border-radius: 10px;
+    justify-items: center;
+    border: 7px solid rgb(181, 205, 176);
+    border-radius: 25px;
+    align-items: center;
+}
+
+.rec-title {
+    grid-area: rec-title;
+}
+
+.rec-main-img {
+    grid-area: rec-main-img;
+    width: 90%;
+
+}
+
+.rec-info {
+    grid-area: rec-info;
+    padding: 5%;
+    margin: 5%;
+    border: 5px dotted beige;
+    border-radius: 10px;
+}
+
+.rec-intro {
+    grid-area: rec-intro;
+}
+
+.rec-ingridient {
+    grid-area: rec-ingridient;
+}
+
+.rec-steps {
+    grid-area: rec-steps;
+}
+
+.rec-img-title {
+    grid-area: rec-img-title;
+}
+
+.rec-img-1 {
+    grid-area: rec-img-1;
+    width: 90%;
+}
+
+.rec-img-2 {
+    grid-area: rec-img-2;
+    width: 90%;
+}
+
+.rec-img-3 {
+    grid-area: rec-img-3;
+    width: 90%;
+}
+
+.tra-grid-container {
+    display: grid;
+    margin: 5px 0;
+    grid-template-areas:
+        "tra-title tra-title tra-intro "
+        "tra-main-img tra-main-img tra-intro "
+        "tra-main-img tra-main-img tra-scenary"
+        "tra-img-title tra-img-title tra-img-title"
+        "tra-img-1 tra-img-2  tra-img-3 "
+        "tra-intro-1 tra-intro-2  tra-intro-3 ";
+    padding: 2%;
+    border-radius: 10px;
+    justify-items: center;
+    align-items: center;
+    border: 7px solid rgb(181, 205, 176);
+    border-radius: 25px;
+}
+
+.tra-title {
+    grid-area: tra-title;
+}
+
+.tra-main-img {
+    grid-area: tra-main-img;
+    width: 90%;
+
+}
+
+.tra-intro {
+    grid-area: tra-intro;
+}
+
+.tra-img-title {
+    grid-area: tra-img-title;
+}
+
+.tra-img-1 {
+    grid-area: tra-img-1;
+    width: 90%;
+}
+
+.tra-img-2 {
+    grid-area: tra-img-2;
+    width: 90%;
+}
+
+.tra-img-3 {
+    grid-area: tra-img-3;
+    width: 90%;
+}
+
+.tra-scenary {
+    grid-area: tra-scenary;
+    padding: 5%;
+    margin: 5%;
+    border: 5px dotted beige;
+    border-radius: 10px;
+
+}
+
+.tra-intro-1 {
+    grid-area: tra-intro-1;
+}
+
+.tra-intro-2 {
+    grid-area: tra-intro-2;
+}
+
+.tra-intro-3 {
+    grid-area: tra-intro-3;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .animated-element {
-        display: none;
-    }
-    .gif-element {
+    #video {
         display: none;
     }
 
+    #gif-element {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 680px) {
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2,
+    h3 {
+        font-size: 30px;
+    }
+
+    nav ul {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 15px;
+    }
 }
